@@ -1,0 +1,7 @@
+<div class="admin_painting">
+  <%= form_for Painting.new, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+    <%= f.label :europeana_id %>: <%= f.text_field :europeana_id %>
+    <%= f.label :location %>: <%= f.text_field :location %>
+    <%= f.submit "Add new Painting" %>
+  <% end %>
+</div>

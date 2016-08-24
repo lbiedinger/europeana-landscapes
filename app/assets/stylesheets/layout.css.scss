@@ -26,4 +26,15 @@ form.button_to {
     padding: 10px;
     font-size: 1.5em;
 }
-#mapid { height: 180px; }
+
+/** Admin stuff **/
+div.admin_painting {
+  clear: both;
+  padding-top: 8px;
+  margin: 20px 20px;
+  height: 24px;
+  border-top: solid 1px black;
+    form{
+      float: left;
+    }
+}

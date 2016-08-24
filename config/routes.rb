@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get 'quiz' => 'quizzes#show'
   get 'results' => 'quizzes#results'
   post 'quizzes/submit' => 'quizzes#submit'
+
+  resources :paintings, only: [:index, :create, :update, :destroy]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

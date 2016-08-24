@@ -1,0 +1,11 @@
+<div class="admin_painting">
+  <%= form_for painting do |f| %>
+      <%= f.label :europeana_id %>: <%= f.text_field :europeana_id %>
+      <%= f.label :location %>: <%= f.text_field :location %>
+
+      <%= f.submit %>
+  <% end %>
+  <%= form_for painting, :html => {:method => :delete} do |f| %>
+      <%= f.submit 'Delete Painting' %>
+  <% end %>
+</div>
