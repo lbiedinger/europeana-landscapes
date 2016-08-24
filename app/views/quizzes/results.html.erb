@@ -1,0 +1,8 @@
+Congratulations you finsihed the quiz!
+
+<p>You got <%= @correct_answers %> out of 5 answers right!</p>
+
+<% if @correct_answers >= 2 %>
+    <p>Well done!</p>
+<% end %>
+<div><a href="/quiz">Start a new quiz!</a></div>

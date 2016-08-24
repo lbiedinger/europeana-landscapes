@@ -1,0 +1,5 @@
+<div class="amswers">
+  <% @answers.each do |answer| %>
+    <%= button_to answer, quizzes_submit_path + "?selected_answer=#{answer}&question_number=#{@question_number}" %>
+  <% end %>
+</div>

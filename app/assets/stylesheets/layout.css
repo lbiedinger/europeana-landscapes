@@ -1,0 +1,19 @@
+body {
+}
+
+div.answers {
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+div.picture_div{
+    margin: 0 auto;
+    width: 70vw;
+}
+
+form.button_to {
+    float: left;
+    padding: 10px;
+}
+#mapid { height: 180px; }
