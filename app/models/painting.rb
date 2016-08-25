@@ -13,4 +13,12 @@ class Painting < ActiveRecord::Base
     thumbnail_url ||= "https://www.europeana.eu/api/v2/thumbnail-by-url.json?size=w200&uri=#{CGI.escape media_uri}&type=IMAGE"
     thumbnail_url ||= "https://www.europeana.eu/api/v2/thumbnail-by-url.json?size=w200&type=IMAGE"
   end
+
+  def display_image_url
+    "https://s3.eu-central-1.amazonaws.com/europeana-landscapes/#{id_for_aws}.jpg"
+  end
+
+  def id_for_aws
+    europeana_id.gsub("/", "_")
+  end
 end
