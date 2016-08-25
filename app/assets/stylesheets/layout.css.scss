@@ -53,6 +53,35 @@ div.quiz_results{
   p{
     font-size: 28px;
   }
+
+  div.summary_results{
+    text-align: center;
+    div.summary_result{
+      display: inline-block;
+      padding: 20px;
+      p{
+        font-size: 18px;
+      }
+      img.painting_thumbnail{
+        max-width: 350px;
+        max-height: 350px;
+        margin-bottom: 8px;
+      }
+      span.summary_icon {
+        &.true {
+          color: green;
+        }
+        &.false {
+          color: red;
+        }
+      }
+    }
+    clear: both;
+  }
+  div.new_quiz_button{
+    margin-top: 22px;
+    clear: both;
+  }
 }
 
 

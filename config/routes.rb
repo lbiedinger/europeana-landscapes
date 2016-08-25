@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'quiz' => 'quizzes#show'
   get 'results' => 'quizzes#results'
   post 'quizzes/submit' => 'quizzes#submit'
+  get 'quizzes/new' => 'quizzes#new'
 
   resources :paintings, only: [:index, :create, :update, :destroy]
 

@@ -1,0 +1,10 @@
+<% @summary[:answers].each do |answer| %>
+    <div class="summary_result">
+      <img class="painting_thumbnail" src="<%= answer[:thumbnail_url] %>">
+      <p><%= answer[:painting_location] %><span class="summary_icon <%= answer[:correct] %>"><% if answer[:correct] == "true"%>&#10004;<% else %>&#10008;<% end %></span></p>
+      <% if answer[:correct] == "false" %>
+        <p>(You answered: <%= answer[:given_answer]%>)</p>
+      <% end %>
+      <a href="<%= answer[:info_url] %>" target="_blank"><span>More info</span></a>
+    </div>
+<% end %>
