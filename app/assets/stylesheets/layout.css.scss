@@ -1,15 +1,10 @@
 body {
 }
 
-div.picture_div{
-  text-align: center;
-    margin: 0 auto;
-    width: 70vw;
-    max-height: 80vh;
-}
-
 img.painting{
+  margin: 0 auto;
   max-height: 99vh;
+  display: inherit;
 }
 
 form.button_to {
