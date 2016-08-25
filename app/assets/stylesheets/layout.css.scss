@@ -5,19 +5,21 @@ div.answers {
     margin: 0 auto;
     text-align: center;
     width: 70vw;
+    form.button_to{
+      display: inline-block;
+      float: none;
+    }
 }
 
 div.picture_div{
+  text-align: center;
     margin: 0 auto;
     width: 70vw;
+    max-height: 80vh;
 }
 
 img.painting{
-    display: block;
-    width: 100%;
-    min-height: 100%;
-    max-width: 800px;
-    max-height: 70vh;
+  max-height: 80vh;
 }
 
 form.button_to {
