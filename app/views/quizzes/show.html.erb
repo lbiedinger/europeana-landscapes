@@ -1,9 +1,11 @@
-<div class="progress_div"><%= @quiz.paintings.count %> of 5</div>
-<div class="quiz_header">
-  <h1>Somewhere in Europeana</h1>
-  <h2>Can you guess what country the Europeana painting depicts?</h2>
+<div class="side_panel">  
+  <div class="quiz_header">
+    <h2>Where is it?</h2>
+  </div>
+  <%= render partial: 'answers' %>
+  <%= image_tag("WhiteLogo", class: "europeana_logo") %>
 </div>
-<div class="quizz_panel">
-<%= render template: 'paintings/show'%>
-<%= render partial: 'answers' %>
+<div class="quiz_panel">
+  <%= render template: 'paintings/show'%>
+  <div class="progress_div"><%= @quiz.paintings.count %> of 5</div>
 </div>

@@ -1,5 +1,5 @@
 <div class="answers">
   <% @answers.each do |answer| %>
-    <%= button_to answer, quizzes_submit_path + "?selected_answer=#{answer}&question_number=#{@question_number}", class: "btn btn-primary" %>
+    <%= button_to answer, quizzes_submit_path + "?selected_answer=#{answer}&question_number=#{@question_number}", class: "btn btn-default" %>
   <% end %>
 </div>

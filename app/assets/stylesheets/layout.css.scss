@@ -1,16 +1,6 @@
 body {
 }
 
-div.answers {
-    margin: 0 auto;
-    text-align: center;
-    width: 70vw;
-    form.button_to{
-      display: inline-block;
-      float: none;
-    }
-}
-
 div.picture_div{
   text-align: center;
     margin: 0 auto;
@@ -19,7 +9,7 @@ div.picture_div{
 }
 
 img.painting{
-  max-height: 80vh;
+  max-height: 99vh;
 }
 
 form.button_to {
@@ -30,27 +20,78 @@ form.button_to {
 }
 
 div.quiz_index{
+  width: 100%;
+  height: 100vh;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  background-color: #1676AA;
+  img.europeana_logo{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 45vw;
+    margin-bottom: 10px;
+    max-width: 10vw;
+    height: auto;
+
+  }
 }
 
-div.quiz_header{
-  padding: 12px;
+div.side_panel{
   text-align: center;
+  float: right;
+  width: 16vw;
+  height: 100vh;
+  padding-top: 22px;
+  background-color: #1676AA;
+  p{
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+  }
+  div.answers {
+    margin: 0 auto;
+    text-align: center;
+    form.button_to{
+      display:inline-block;
+      width: 80%;
+      float: none;
+    }
+  }
+  img.europeana_logo{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 3vw;
+    max-width: 10vw;
+    height: auto;
+  }
+
+  div.new_quiz_button{
+    margin-top: 22px;
+  }
 }
 
+div.quiz_panel{
+  background-color: black;
+  width: 84vw;
+  height: 100vh;
 
-div.progress_div{
-  float: right;
-  widht: 15%;
-  font-size: 28px;
-  padding: 30px 12px;
+  div.progress_div{
+    position: absolute;
+    top: 0;
+    right: 16vw;
+    font-size: 28px;
+    padding: 30px 30px;
+  }
 }
 
 div.quiz_results{
-  margin: 0 auto;
-  padding: 20px;
+  background-color: black;
+  width: 84vw;
+  height: 100vh;
   text-align: center;
   p{
     font-size: 28px;
@@ -78,11 +119,6 @@ div.quiz_results{
         }
       }
     }
-    clear: both;
-  }
-  div.new_quiz_button{
-    margin-top: 22px;
-    clear: both;
   }
 }
 
