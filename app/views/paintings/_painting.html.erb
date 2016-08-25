@@ -8,4 +8,5 @@
   <%= form_for painting, :html => {:method => :delete} do |f| %>
       <%= f.submit 'Delete Painting' %>
   <% end %>
+  Has Thumbnail: <%= !painting.thumbnail_url.blank? %>, <a href="<%= painting.display_image_url %>" target="_blank">Link to AWS image</a>
 </div>
