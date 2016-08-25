@@ -1,5 +1,10 @@
 body {
 }
+div.paintings_admin{
+  background-color: #F4F4F4;
+  color: #000;
+  min-height: 100vh;  
+}
 
 img.painting{
   margin: 0 auto;
@@ -112,6 +117,9 @@ div.quiz_results{
         &.false {
           color: red;
         }
+      }
+      a{
+        color: #FFF;
       }
     }
   }

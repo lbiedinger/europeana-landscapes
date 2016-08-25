@@ -1,5 +1,7 @@
-<h1>Listing all paintings:</h1>
-<% @paintings.each do |painting| %>
- <%= render painting %>
-<% end %>
-<%= render "new" %>
+<div class="paintings_admin">
+  <h1>Listing all paintings:</h1>
+  <% @paintings.each do |painting| %>
+   <%= render painting %>
+  <% end %>
+  <%= render "new" %>
+</div>
