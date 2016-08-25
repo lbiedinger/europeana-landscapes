@@ -1,8 +1,10 @@
-Congratulations you finsihed the quiz!
+<div class="quiz_results">
+  <h1>Congratulations you finsihed the quiz!</h1>
 
-<p>You got <%= @correct_answers %> out of 5 answers right!</p>
+  <p>You got <%= @correct_answers %> out of 5 answers right!</p>
 
-<% if @correct_answers >= 2 %>
-    <p>Well done!</p>
-<% end %>
-<div><a href="/quiz">Start a new quiz!</a></div>
+  <% if @correct_answers >= 2 %>
+      <p>Well done!</p>
+  <% end %>
+  <div><a class="btn btn-primary" href="/quiz" role="button">Start a new quiz!</a></div>
+</div>

@@ -1,4 +1,9 @@
-<h1>Somewhere in Europeana</h1>
-<h2>Can you guess what country the Europeana painting depicts?</h2>
+<div class="progress_div"><%= @quiz.paintings.count %> of 5</div>
+<div class="quiz_header">
+  <h1>Somewhere in Europeana</h1>
+  <h2>Can you guess what country the Europeana painting depicts?</h2>
+</div>
+<div class="quizz_panel">
 <%= render template: 'paintings/show'%>
 <%= render partial: 'answers' %>
+</div>

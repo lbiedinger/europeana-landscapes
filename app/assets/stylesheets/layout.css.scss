@@ -27,6 +27,36 @@ form.button_to {
     font-size: 1.5em;
 }
 
+div.quiz_index{
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+div.quiz_header{
+  padding: 12px;
+  text-align: center;
+}
+
+
+div.progress_div{
+  float: right;
+  widht: 15%;
+  font-size: 28px;
+  padding: 30px 12px;
+}
+
+div.quiz_results{
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  p{
+    font-size: 28px;
+  }
+}
+
+
+
 /** Admin stuff **/
 div.admin_painting {
   clear: both;
