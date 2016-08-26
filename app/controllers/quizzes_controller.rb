@@ -10,6 +10,7 @@ class QuizzesController < ApplicationController
   end
 
   def show
+    session[:start_time] = Time.now if session[:start_time].nil?
     get_answers
   end
 
@@ -20,7 +21,8 @@ class QuizzesController < ApplicationController
 
   def submit
     answer = params["selected_answer"]
-    @quiz.answers = @quiz.answers << answer
+    @quiz.answers = @quiz.answers << {answer_text: answer, time: time_taken}
+    session[:start_time] = nil
     session[:current_quiz] = @quiz
     if @question_number < 5
       redirect_to "/quiz"
@@ -48,20 +50,27 @@ class QuizzesController < ApplicationController
     end
 
     def result_summary
-      summary = {correct_answers: 0, answers: []}
+      summary = {correct_answers: 0, answers: [], points: 0}
       @quiz.paintings.each_with_index do |painting_key, index|
         painting = Painting.find(painting_key)
-        correct = painting.location == @quiz.answers[index]
+        correct = painting.location == @quiz.answers[index]["answer_text"]
         summary[:correct_answers] += 1 if correct
         summary[:answers] << {painting_location: painting.location,
                               correct: correct.to_s,
-                              given_answer: @quiz.answers[index],
+                              given_answer: @quiz.answers[index]["answer_text"],
                               thumbnail_url: painting.thumbnail_url,
+                              time_taken: @quiz.answers[index]["time"],
                               info_url: "http://www.europeana.eu/portal/en/record/#{painting.europeana_id}.html"}
+        summary[:points] = calculate_score summary[:answers]
       end
       summary
     end
 
+    def time_taken
+      elapsed_seconds = ((Time.now - Time.parse(session[:start_time]))).to_i
+      puts "elapsed_seconds: #{elapsed_seconds}"
+      elapsed_seconds
+    end
 
     def get_answers
       answers = [@painting.location]
@@ -82,5 +91,17 @@ class QuizzesController < ApplicationController
       end
       @quiz ||= Quiz.new
       session[:current_quiz] = @quiz
+    end
+
+    def calculate_score answers
+      score = 0
+      answers.each do |answer|
+        if answer[:correct] == "true"
+          multiplier = (2000 - (answer[:time_taken] * 33))
+          multiplier = 1 if multiplier < 1
+          score += (1 * multiplier)
+        end
+      end
+      score
     end
 end

@@ -10,6 +10,8 @@
   </div>
   <p>You got <b><%= @summary[:correct_answers] %></b> of <b>5</b> right!</p>
 
+  <p>You scored <b><%= @summary[:points] %></b> points!</p>
+
   <% if @summary[:correct_answers] >= 2 %>
       <p>Well done!</p>
   <% end %>
