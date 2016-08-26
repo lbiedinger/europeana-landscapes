@@ -15,6 +15,7 @@
   <% if @summary[:correct_answers] >= 2 %>
       <p>Well done!</p>
   <% end %>
+  <%= render partial: 'submit_score' %>
   <div class="new_quiz_button"><a class="btn btn-danger" href="/quizzes/new" role="button">Start a new quiz!</a></div>
 
   <%= image_tag("WhiteLogo", class: "europeana_logo") %>

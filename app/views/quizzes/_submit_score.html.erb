@@ -1,0 +1,6 @@
+<%= form_for Highscore.new, url: {controller: "highscores",action: "create"}, validate: true do |f| %>
+    <div class="form-group initials_form">
+      <%= f.text_field :initials, maxlength: 3, size: 5, class: "form-control initials" %>
+      <%= f.submit "Submit Score!", class: "btn btn-default"%>
+    </div>
+<% end %>

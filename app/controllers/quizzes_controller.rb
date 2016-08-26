@@ -16,6 +16,7 @@ class QuizzesController < ApplicationController
 
   def new
     session[:current_quiz] = nil
+    session[:score] = nil
     redirect_to "/quiz"
   end
 
@@ -63,6 +64,7 @@ class QuizzesController < ApplicationController
                               info_url: "http://www.europeana.eu/portal/en/record/#{painting.europeana_id}.html"}
         summary[:points] = calculate_score summary[:answers]
       end
+      session[:score] = summary[:points]
       summary
     end
 

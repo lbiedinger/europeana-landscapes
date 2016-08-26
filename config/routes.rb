@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   resources :paintings, only: [:index, :create, :update, :destroy]
 
+  resources :highscores, only: [:index, :create, :update, :destroy]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

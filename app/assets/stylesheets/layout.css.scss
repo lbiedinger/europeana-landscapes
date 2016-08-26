@@ -77,6 +77,16 @@ div.side_panel{
   div.new_quiz_button{
     margin-top: 22px;
   }
+  div.initials_form{
+    float: none;
+    text-align: center;
+    .initials{
+      width: auto;
+      float: none;
+      display: inline-block;
+      text-align: center;
+    }
+  }
 }
 
 div.quiz_panel{
@@ -89,6 +99,20 @@ div.quiz_panel{
     right: 0;
     font-size: 28px;
     padding: 30px 30px;
+  }
+}
+
+div.quiz_highscores{
+  background-color: black;
+  min-height: 100vh;
+  text-align: center;
+  div.scores{
+    margin-top: 28px;
+    color: #FFF;
+    div.highscore{
+      padding: 6px;
+      font-size: 26px;
+    }
   }
 }
 

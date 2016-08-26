@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160825122042) do
+ActiveRecord::Schema.define(version: 20160826092911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "highscores", force: :cascade do |t|
+    t.string  "initials"
+    t.integer "score"
+  end
+
+  add_index "highscores", ["score"], name: "index_highscores_on_score", using: :btree
 
   create_table "paintings", force: :cascade do |t|
     t.string   "europeana_id"

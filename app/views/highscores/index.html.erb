@@ -1,0 +1,16 @@
+<div class="quiz_highscores col-md-10">
+  <div class="scores">
+    <h1>Higscores</h1>
+    <% @highscores.each_with_index do |score, index| %>
+        <div class="highscore">
+          <%= index + 1 %>. <b><%= score.initials %></b>, <%= score.score %>
+        </div>
+    <% end %>
+  </div>
+</div>
+<div class="side_panel col-md-2">
+  <p>Can you do better?</p>
+  <div class="new_quiz_button"><a class="btn btn-danger" href="/quizzes/new" role="button">Start a new quiz!</a></div>
+
+  <%= image_tag("WhiteLogo", class: "europeana_logo") %>
+</div>
