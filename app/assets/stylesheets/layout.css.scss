@@ -1,14 +1,18 @@
 body {
 }
-div.paintings_admin{
-  background-color: #F4F4F4;
-  color: #000;
-  min-height: 100vh;  
+
+div.main-container{
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 0px;
 }
 
 img.painting{
   margin: 0 auto;
+  padding-top: .5vh;
   max-height: 99vh;
+  max-width: 100%;
   display: inherit;
 }
 
@@ -40,11 +44,11 @@ div.quiz_index{
 
 div.side_panel{
   text-align: center;
-  float: right;
-  width: 16vw;
-  height: 100vh;
+  #float: right;
+  min-height: 100vh;
   padding-top: 22px;
   background-color: #1676AA;
+
   p{
     margin-top: 22px;
     font-size: 16px;
@@ -67,6 +71,7 @@ div.side_panel{
     margin: 3vw;
     max-width: 10vw;
     height: auto;
+    max-height: 20vh;
   }
 
   div.new_quiz_button{
@@ -76,13 +81,12 @@ div.side_panel{
 
 div.quiz_panel{
   background-color: black;
-  width: 84vw;
-  height: 100vh;
+  min-height: 100vh;
 
   div.progress_div{
     position: absolute;
     top: 0;
-    right: 16vw;
+    right: 0;
     font-size: 28px;
     padding: 30px 30px;
   }
@@ -90,7 +94,6 @@ div.quiz_panel{
 
 div.quiz_results{
   background-color: black;
-  width: 84vw;
   height: 100vh;
   text-align: center;
   p{
@@ -128,6 +131,13 @@ div.quiz_results{
 
 
 /** Admin stuff **/
+div.paintings_admin{
+  background-color: #F4F4F4;
+  color: #000;
+  min-height: 100vh;
+}
+
+
 div.admin_painting {
   clear: both;
   padding-top: 8px;

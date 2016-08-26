@@ -1,11 +1,12 @@
-<div class="side_panel">  
+<div class="quiz_panel col-md-10">
+  <%= render template: 'paintings/show'%>
+  <div class="progress_div"><%= @quiz.paintings.count %> of 5</div>
+</div>
+<div class="side_panel col-md-2">
   <div class="quiz_header">
     <h2>Where is it?</h2>
   </div>
   <%= render partial: 'answers' %>
   <%= image_tag("WhiteLogo", class: "europeana_logo") %>
 </div>
-<div class="quiz_panel">
-  <%= render template: 'paintings/show'%>
-  <div class="progress_div"><%= @quiz.paintings.count %> of 5</div>
-</div>
+
